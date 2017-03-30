@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+ <mapper namespace="com.istrom.dao.db.ResourceDb">
+ 	
+ 	<select id="getResUrl" resultType="String">
+ 		SELECT DISTINCT(re.`res_string`) FROM role r,permission pe,resources re ,permission_resources pr,  role_permission rp WHERE 1=1
+ 		<if test="name != null">
+ 			and r.`name` = #{name}
+ 		</if>
+ 		AND r.id=rp.role_id AND pe.id=rp.perm_id AND pe.id=pr.perm_id AND pr.resc_id=re.id 
+ 	</select>
+ </mapper>

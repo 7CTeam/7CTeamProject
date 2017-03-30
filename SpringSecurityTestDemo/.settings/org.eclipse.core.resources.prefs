@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+encoding//WebContent/protected/user.jsp=UTF-8
+encoding//resources/log4j.properties=UTF-8
+encoding//src/com/istrom/dao/UserDao.java=UTF-8
+encoding//src/com/istrom/po/Result.java=UTF-8
+encoding//src/org/springframework/security/core/userdetails/CasUserDetailService.java=UTF-8
